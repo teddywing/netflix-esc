@@ -38,6 +38,18 @@ document.addEventListener(
 			);
 
 			close_button.dispatchEvent(click);
+
+			return;
+		}
+
+		// Show info modal with 'i'.
+		if (e.key === 'i') {
+			var more_info_button = document.querySelector(
+				'.mini-modal-container button[data-uia="expand-to-detail-button"]'
+			);
+
+			var pointer_event = new PointerEvent('pointerdown', { bubbles: true });
+			more_info_button.dispatchEvent(pointer_event);
 		}
 	}
 );
