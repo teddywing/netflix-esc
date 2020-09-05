@@ -24,7 +24,10 @@
 document.addEventListener(
 	'keyup',
 	function(e) {
-		if (e.key === 'Escape') {
+		if (
+			e.key === 'Escape'
+			|| (e.ctrlKey && e.key === '[')
+		) {
 			var close_button = document.querySelector(
 				'[data-uia="previewModal-closebtn"] > [role="button"]'
 			);
