@@ -24,32 +24,45 @@
 document.addEventListener(
 	'keyup',
 	function(e) {
+		// Close info modal with Escape.
 		if (
 			e.key === 'Escape'
 			|| (e.ctrlKey && e.key === '[')
 		) {
-			var close_button = document.querySelector(
-				'[data-uia="previewModal-closebtn"] > [role="button"]'
-			);
-
-			var click = new MouseEvent(
-				'click',
-				{ buttons: 1, bubbles: true }
-			);
-
-			close_button.dispatchEvent(click);
+			info_modal_close();
 
 			return;
 		}
 
 		// Show info modal with 'i'.
 		if (e.key === 'i') {
-			var more_info_button = document.querySelector(
-				'.mini-modal-container button[data-uia="expand-to-detail-button"]'
-			);
-
-			var pointer_event = new PointerEvent('pointerdown', { bubbles: true });
-			more_info_button.dispatchEvent(pointer_event);
+			info_modal_open();
 		}
 	}
 );
+
+
+// Click the close button in the info modal.
+function info_modal_close () {
+	var close_button = document.querySelector(
+		'[data-uia="previewModal-closebtn"] > [role="button"]'
+	);
+
+	var click = new MouseEvent(
+		'click',
+		{ buttons: 1, bubbles: true }
+	);
+
+	close_button.dispatchEvent(click);
+}
+
+// Click the "More info" button that appears when a tile is hovered and
+// expanded.
+function info_modal_open () {
+	var more_info_button = document.querySelector(
+		'.mini-modal-container button[data-uia="expand-to-detail-button"]'
+	);
+
+	var pointer_event = new PointerEvent('pointerdown', { bubbles: true });
+	more_info_button.dispatchEvent(pointer_event);
+}
