@@ -45,7 +45,7 @@ document.addEventListener(
 // Click the close button in the info modal.
 function info_modal_close () {
 	var close_button = document.querySelector(
-		'[data-uia="previewModal-closebtn"] > [role="button"]'
+		'[data-uia="previewModal-closebtn"][role="button"]'
 	);
 
 	var click = new MouseEvent(
