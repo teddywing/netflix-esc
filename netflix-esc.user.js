@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name Netflix Esc
 // @description Add keyboard shortcuts to Netflix
-// @version 0.0.2
+// @version 0.0.3
 // @namespace com.teddywing
 // @match https://www.netflix.com/*
 // ==/UserScript==

@@ -1,6 +1,17 @@
 CHANGELOG
 =========
 
+v0.0.3 (2021-03-19):
+	Additions:
+
+	* Add <h> and <l> bindings to paginate left and right on the currently
+	  hovered row.
+
+	Fixes:
+
+	* Update the click event for the "More Info" button to get <i> working again
+	  following a recent site update.
+
 v0.0.2 (2021-02-20):
 	Fixes:
 
