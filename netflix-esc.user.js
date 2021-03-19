@@ -63,6 +63,9 @@ function info_modal_open () {
 		'.mini-modal-container button[data-uia="expand-to-detail-button"]'
 	);
 
-	var pointer_event = new PointerEvent('pointerdown', { bubbles: true });
-	more_info_button.dispatchEvent(pointer_event);
+	var click = new MouseEvent(
+		'click',
+		{ buttons: 1, bubbles: true }
+	);
+	more_info_button.dispatchEvent(click);
 }
