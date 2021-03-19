@@ -9,6 +9,8 @@ Shortcuts:
 |-----------------------|-------------------------------------------|
 | `<Escape>` or `<C-[>` | Close info modal                          |
 | `i`                   | Open info modal when hovering over a tile |
+| `h`                   | Page left on the hovered row              |
+| `l`                   | Page right on the hovered row             |
 
 
 ## Install
@@ -17,8 +19,8 @@ detailed explanation][2] is available on the Greasemonkey wiki.
 
 
 ## License
-Copyright © 2020 Teddy Wing. Licensed under the GNU GPLv3+ (see the included
-COPYING file).
+Copyright © 2020–2021 Teddy Wing. Licensed under the GNU GPLv3+ (see the
+included COPYING file).
 
 
 [1]: https://raw.githubusercontent.com/teddywing/netflix-esc/master/netflix-esc.user.js
