@@ -37,6 +37,22 @@ document.addEventListener(
 		// Show info modal with 'i'.
 		if (e.key === 'i') {
 			info_modal_open();
+
+			return;
+		}
+
+		// Page left on hovered row.
+		if (e.key === 'h') {
+			row_left();
+
+			return;
+		}
+
+		// Page right on hovered row.
+		if (e.key === 'l') {
+			row_right();
+
+			return;
 		}
 	}
 );
@@ -68,4 +84,25 @@ function info_modal_open () {
 		{ buttons: 1, bubbles: true }
 	);
 	more_info_button.dispatchEvent(click);
+}
+
+function row_left () {
+	var page_left = document.querySelector('.lolomoRow:hover .handlePrev');
+
+	var click = new MouseEvent(
+		'click',
+		{ buttons: 1, bubbles: true }
+	);
+	page_left.dispatchEvent(click);
+}
+
+
+function row_right () {
+	var page_right = document.querySelector('.lolomoRow:hover .handleNext');
+
+	var click = new MouseEvent(
+		'click',
+		{ buttons: 1, bubbles: true }
+	);
+	page_right.dispatchEvent(click);
 }
