@@ -79,11 +79,7 @@ function info_modal_open () {
 		'.mini-modal-container button[data-uia="expand-to-detail-button"]'
 	);
 
-	var click = new MouseEvent(
-		'click',
-		{ buttons: 1, bubbles: true }
-	);
-	more_info_button.dispatchEvent(click);
+	more_info_button.click();
 }
 
 function row_left () {
